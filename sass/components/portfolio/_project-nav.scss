@@ -1,11 +1,28 @@
 .project-nav {
 
-    margin-bottom: 50px;
-    @include flex-centered ();
+    // margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 40px;
+
+    @include tablet {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    @include desktop {
+        margin-bottom: 50px;
+        justify-content: center;
+    }
 }
 
 .project-nav__item--margin {
     margin-right: 8px;
+}
+
+.project-nav__item {
+    margin-bottom: 10px;
 }
 
 

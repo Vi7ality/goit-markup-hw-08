@@ -6,6 +6,8 @@
     @include desktop {
         padding-top: 60px;
         padding-bottom: 60px;
+
+        text-align: start;
     }
 
 }
@@ -87,7 +89,6 @@
 .footer__center {
 
     margin-bottom: 60px;
-    text-align: center;
 
      @include tablet {
         margin-left: 165px;

@@ -1,5 +1,5 @@
 .header {
-
+    position: relative;
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid #ECECEC;
@@ -11,28 +11,73 @@
 
 }
 
+.menu-container {
+
+    @media screen and (max-width: 1199px) {
+        outline: 1px solid red;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $primary-white-color;
+            
+        padding: 48px 40px;
+    }
+
+
+    &.is-open {
+        display: block;
+    }
+
+    @include desktop {
+        position: static;
+        display: flex;
+        align-items: center;
+    }
+}
+
 .nav {
-    display: flex;
-    margin-left: 93px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: -32px;
+    }
+
+
+    @include desktop {
+        display: flex;
+        margin-left: 93px;
+        align-items: center;
+    }
+
 }
 
 
 .nav__item {
-    &:not(:last-child) {
-        margin-right: 50px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 32px;
     }
 
+
     &--current {
-        position: relative;
+            position: relative;
+        }
+
+    @include desktop {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
     }
+
+
+
 }
 
 .nav__link {
     color: $tittle-text-color;
 
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 1.18;
     letter-spacing: 0.02em;
 
     text-decoration: none;
@@ -41,6 +86,11 @@
 
     &:hover, &:focus {
         color: $accent-text-color;
+    }
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.14;
     }
 }
 
@@ -49,31 +99,48 @@
     color: $accent-text-color;
     padding-bottom: 31px;
 
+
+
     &::after {
         content: '';
         position: absolute;
         display: block;
         left: 0;
         bottom: -1px;
-    
+
         height: 4px;
         width: 100%;
         background: $accent-text-color;
         border-radius: 2px;
         }
+
+
     }
 
 
 
 
 
-.contacts--flex {
+.contacts {
+    @media screen and (max-width: 1200px) {
+        margin-top: 302px;
+    }
+
+
+    @include desktop {
     display: flex;
     margin-left: auto;
+    // flex-direction: row-reverse;
+    }        
 }
 
+
 .contacts__item--margin {
-    margin-left: 50px;
+
+    @include desktop {
+        margin-left: 50px;        
+    }
+
 }
 
 .contacts__link {
@@ -81,8 +148,6 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
     letter-spacing: 0.02em;
 
     text-decoration: none;
@@ -91,6 +156,26 @@
 
     &:hover, &:focus {
         color: $accent-text-color;
+    }
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.14;
+    }
+}
+
+.contacts__tel {
+    @media screen and (max-width: 1199px) {
+        font-size: 34px;
+        line-height: 1.18;
+        margin-bottom: 32px;
+    }
+}
+
+.contacts__email {
+    @media screen and (max-width: 1200px) {
+        font-size: 24px;
+        line-height: 1.17;
     }
 }
 
@@ -101,4 +186,11 @@
 
 }
 
+.mob-menu__icon {
+    width: 40px;
+    height: 40px;
 
+    @include desktop {
+        display: none;
+    }
+}
