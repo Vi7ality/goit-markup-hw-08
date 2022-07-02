@@ -1,0 +1,38 @@
+.button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: $primary-white-color;
+    fill: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 6px;
+
+    transition: fill 250ms $timing-function;
+
+    &:hover, &:focus {
+        fill: $accent-text-color;
+    }
+}
+
+.modal-form__submit {
+    @include flex-centered ();
+    margin: 0 auto;
+
+    min-width: 200px;
+    height: 50px;
+
+
+    color: $primary-white-color;
+    background-color: $accent-text-color;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}

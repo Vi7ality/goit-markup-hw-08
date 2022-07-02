@@ -1,0 +1,93 @@
+.team {
+    background-color: $secondary-background-color;
+
+}
+
+.team__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+
+}
+
+.team__item {
+    text-align: center;
+    width: 450px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $primary-white-color;
+
+    @include tablet {
+        width: 354px;
+    }
+
+    @include desktop {
+        width: 270px;
+    }
+}
+
+// .team__item--margin {
+//     margin-bottom: 30px;
+// }
+
+.team__content {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    // padding-top: 30px;
+     @include desktop {
+        padding-bottom: 30px;
+     }
+}
+
+.team__name {
+    color: $tittle-text-color;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+
+    margin-bottom: 10px;
+}
+
+.team__staff {
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    margin-bottom: 16px;
+}
+
+.team-networks {
+    @include flex-centered ();
+}
+
+.team-networks__item--margin {
+    margin-right: 10px;
+}
+
+.team-networks__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    @include flex-centered ();
+    fill: $primary-icon-color;
+
+    transition: background-color 250ms $timing-function,
+        fill 250ms $timing-function;
+
+        &:hover, &:focus {
+            background-color: $accent-text-color;
+            fill: $primary-white-color;
+        }
+}
+
+.team-networks__icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
