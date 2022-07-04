@@ -38,7 +38,7 @@ p {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -114,9 +114,30 @@ p {
 
 .header {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #ECECEC;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__nav {
@@ -128,22 +149,33 @@ p {
           align-items: center;
 }
 
-@media screen and (max-width: 1199px) {
+.menu-container {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
   .menu-container {
-    outline: 1px solid red;
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
-    width: 100%;
     background-color: #FFFFFF;
     padding: 48px 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    margin-left: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    margin-left: 93px;
   }
 }
 .menu-container.is-open {
   display: block;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .menu-container {
     position: static;
     display: -webkit-box;
@@ -155,32 +187,26 @@ p {
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .nav {
-    margin-bottom: -32px;
-  }
-}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 93px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .nav__item {
+@media screen and (max-width: 767px) {
+  .nav__item:not(:last-child) {
     margin-bottom: 32px;
   }
 }
 .nav__item--current {
   position: relative;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav__item:not(:last-child) {
     margin-right: 50px;
   }
@@ -199,7 +225,7 @@ p {
 .nav__link:hover, .nav__link:focus {
   color: #2196F3;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .nav__link {
     font-size: 14px;
     line-height: 1.14;
@@ -214,7 +240,7 @@ p {
 .nav__link--current::after {
   content: "";
   position: absolute;
-  display: block;
+  display: none;
   left: 0;
   bottom: -1px;
   height: 4px;
@@ -222,10 +248,30 @@ p {
   background: #2196F3;
   border-radius: 2px;
 }
+@media screen and (min-width: 768px) {
+  .nav__link--current::after {
+    display: block;
+  }
+}
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 767px) {
   .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     margin-top: 302px;
+    margin-bottom: 64px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -233,13 +279,17 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: auto;
   }
 }
 
+@media screen and (max-width: 767px) {
+  .contacts__item:first-child {
+    margin-bottom: 32px;
+  }
+}
 @media screen and (min-width: 1200px) {
-  .contacts__item--margin {
-    margin-left: 50px;
+  .contacts__item:first-child {
+    margin-right: 50px;
   }
 }
 
@@ -260,14 +310,14 @@ p {
 .contacts__link:hover, .contacts__link:focus {
   color: #2196F3;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .contacts__link {
     font-size: 14px;
     line-height: 1.14;
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .contacts__tel {
     font-size: 34px;
     line-height: 1.18;
@@ -275,10 +325,20 @@ p {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 767px) {
   .contacts__email {
     font-size: 24px;
     line-height: 1.17;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__email {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__email {
+    margin-bottom: 0;
   }
 }
 
@@ -288,14 +348,58 @@ p {
   fill: currentColor;
 }
 
-.mob-menu__icon {
-  width: 40px;
-  height: 40px;
+.menu-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
 }
-@media screen and (min-width: 1200px) {
-  .mob-menu__icon {
+@media screen and (min-width: 768px) {
+  .menu-networks {
     display: none;
   }
+}
+
+.menu-networks__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+}
+
+.menu-networks__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 99;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
 }
 
 .footer {
@@ -542,8 +646,8 @@ p {
   padding-top: 118px;
   padding-bottom: 118px;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-background.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1600px;
@@ -882,6 +986,7 @@ p {
 }
 
 .modal {
+  position: relative;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -901,13 +1006,33 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  height: auto;
+  height: 609px;
   padding: 40px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .button-close {
@@ -1115,7 +1240,7 @@ p {
 
 .modal-form__checkbox-label {
   font-size: 12px;
-  line-height: 1.17px;
+  line-height: 1.16;
 }
 @media screen and (min-width: 1200px) {
   .modal-form__checkbox-label {
@@ -1126,6 +1251,7 @@ p {
 
 .modal-form__terms {
   color: #2196F3;
+  font-weight: 400;
 }
 
 .project-nav {
@@ -1257,6 +1383,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  overflow-y: scroll;
   color: #FFFFFF;
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;

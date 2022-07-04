@@ -1,28 +1,55 @@
 .header {
     position: relative;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #ECECEC;
+
+    @include tablet {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    @include desktop {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
 }
 
 .header__nav {
     display: flex;
     align-items: center;
 
+
 }
 
 .menu-container {
+    width: 100%;
 
-    @media screen and (max-width: 1199px) {
-        outline: 1px solid red;
+    @media screen and (max-width: 767px) {
+
         display: none;
         position: absolute;
-        top: 100%;
+        top: 0;
         left: 0;
-        width: 100%;
+    
         background-color: $primary-white-color;
             
         padding: 48px 40px;
+        // transform: translateY(-101%);
+        // transition: transform 250ms $timing-function;
+    }
+
+    @include tablet {
+        margin-left: 88px;
+    }
+
+    @include desktop {
+        margin-left: 93px;
     }
 
 
@@ -30,7 +57,7 @@
         display: block;
     }
 
-    @include desktop {
+    @include tablet {
         position: static;
         display: flex;
         align-items: center;
@@ -38,14 +65,9 @@
 }
 
 .nav {
-    @media screen and (max-width: 1199px) {
-        margin-bottom: -32px;
-    }
 
-
-    @include desktop {
+    @include tablet {
         display: flex;
-        margin-left: 93px;
         align-items: center;
     }
 
@@ -53,8 +75,10 @@
 
 
 .nav__item {
-    @media screen and (max-width: 1199px) {
-        margin-bottom: 32px;
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
     }
 
 
@@ -62,7 +86,7 @@
             position: relative;
         }
 
-    @include desktop {
+    @include tablet {
         &:not(:last-child) {
             margin-right: 50px;
         }
@@ -88,7 +112,7 @@
         color: $accent-text-color;
     }
 
-    @include desktop {
+    @include tablet {
         font-size: 14px;
         line-height: 1.14;
     }
@@ -104,7 +128,7 @@
     &::after {
         content: '';
         position: absolute;
-        display: block;
+        display: none;
         left: 0;
         bottom: -1px;
 
@@ -112,7 +136,13 @@
         width: 100%;
         background: $accent-text-color;
         border-radius: 2px;
+
+        @include tablet {
+            display: block;
         }
+        }
+
+    
 
 
     }
@@ -122,23 +152,31 @@
 
 
 .contacts {
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
         margin-top: 302px;
+        margin-bottom: 64px;
     }
 
 
+    @include tablet {
+        margin-left: auto;
+    }
+    
     @include desktop {
-    display: flex;
-    margin-left: auto;
-    // flex-direction: row-reverse;
-    }        
+        display: flex;
+    }
 }
 
-
-.contacts__item--margin {
+.contacts__item:first-child {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+    }
 
     @include desktop {
-        margin-left: 50px;        
+        margin-right: 50px;        
     }
 
 }
@@ -158,14 +196,14 @@
         color: $accent-text-color;
     }
 
-    @include desktop {
+    @include tablet {
         font-size: 14px;
         line-height: 1.14;
     }
 }
 
 .contacts__tel {
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 767px) {
         font-size: 34px;
         line-height: 1.18;
         margin-bottom: 32px;
@@ -173,9 +211,15 @@
 }
 
 .contacts__email {
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 767px) {
         font-size: 24px;
         line-height: 1.17;
+    }
+    @include tablet {
+        margin-bottom: 10px;
+    }
+    @include desktop {
+        margin-bottom: 0;
     }
 }
 
@@ -186,11 +230,57 @@
 
 }
 
-.mob-menu__icon {
-    width: 40px;
-    height: 40px;
+.menu-networks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 
-    @include desktop {
+    @include tablet {
         display: none;
     }
+}
+
+
+
+.menu-networks__item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+}
+
+.menu-networks__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: $accent-text-color;
+}
+
+.menu-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 99;
+    background-color: transparent;
+    border: none;
+
+    margin-left: auto;
+    
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.icon-close {
+
+    display: none;
+}
+
+.menu-button.is-open .icon-menu {
+    display: none;
+}
+
+.menu-button.is-open .icon-close {
+    display: block;
 }
