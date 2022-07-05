@@ -29,7 +29,8 @@
 }
 
 .menu-container {
-    display: block;
+    display: flex;
+
     width: 100%;
     transform: translateX(-100%);
     transition: transform 250ms $timing-function;
@@ -38,7 +39,7 @@
 
     @media screen and (max-width: 767px) {
 
-        // display: none;
+        flex-direction: column;
         position: fixed;
         top: 0;
         left: 0;
@@ -168,7 +169,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column-reverse;
-        margin-top: 302px;
+        margin-top: auto;
         margin-bottom: 64px;
     }
 
@@ -216,6 +217,7 @@
 
 .contacts__tel {
     @media screen and (max-width: 767px) {
+        color: $accent-text-color;
         font-size: 34px;
         line-height: 1.18;
         margin-bottom: 32px;
