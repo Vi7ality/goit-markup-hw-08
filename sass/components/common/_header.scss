@@ -30,12 +30,16 @@
 .menu-container {
     width: 100%;
 
+
+
     @media screen and (max-width: 767px) {
 
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
+        height: 100vh;
+
     
         background-color: $primary-white-color;
             
@@ -63,6 +67,8 @@
         align-items: center;
     }
 }
+
+
 
 .nav {
 
@@ -284,3 +290,6 @@
 .menu-button.is-open .icon-close {
     display: block;
 }
+
+
+

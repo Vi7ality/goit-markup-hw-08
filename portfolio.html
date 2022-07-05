@@ -91,14 +91,29 @@
                 <li class="project-nav__item">
                     <button type="button" class="project-nav__filter">Маркетинг</button></li>    
             </ul>
-        
+
             <ul class="grid list">
                 <li class="grid__item">
                     <a href="" class="project link">
                         
                         <div class="project__thumb">
-                            <img src="./images/techcrack.jpg" alt="Технокряк"
-                            >
+                            <picture>
+                                <source srcset="
+                                    ./images/techcrack-mob-min.jpg 1x,
+                                    ./images/techcrack-mob-x2-min.jpg 2x" 
+                                    media="(max-width: 767px)">
+                                <source srcset="
+                                        ./images/techcrack-tab-min.jpg 1x,
+                                        ./images/techcrack-tab-x2-min.jpg 2x" 
+                                        media="(max-width: 1199px)">
+                                <source
+                                srcset="
+                                ./images/techcrack.jpg 1x,
+                                ./images/techcrack-x2-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <img src="./images/techcrack.jpg" alt="Технокряк">
+                            </picture>
+
                             <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                             исчерпывающие сведения о компании или частном лице.</p>
                             
@@ -115,7 +130,18 @@
                 <li class="grid__item">
                     <a href="" class="project link">
                         <div class="project__thumb">
-                            <img src="./images/poster-new-orlean.jpg" alt="Постер New Orlean vs Golden Star" >
+                            <picture>
+                                <source srcset="
+                                                                ./images/new_orlean-mob-min.jpg 1x,
+                                                                ./images/new_orlean-mob-x2-min.jpg 2x" media="(max-width: 767px)">
+                                <source srcset="
+                                                                ./images/new_orleans-tab-min.jpg 1x,
+                                                                ./images/new_orleans-tab-x2-min.jpg 2x" media="(max-width: 1199px)">
+                                <source srcset="
+                                                                ./images/poster-new-orlean.jpg 1x,
+                                                                ./images/poster-new-orlean-x2-min.jpg 2x" media="(min-width: 1200px)">
+                                <img src="./images/poster-new-orlean.jpg" alt="Постер New Orlean vs Golden Star">
+                            </picture>
                             <p class="project__text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur vitae, voluptas unde corporis minus?
                             </p>
@@ -132,7 +158,19 @@
                 <li class="grid__item">
                     <a href="" class="project link">
                         <div class="project__thumb">
-                            <img src="./images/seafood.jpg" alt="Ресторан Seafood" >
+                            <picture>
+                                <source srcset="
+                                    ./images/seafood-mob-min.jpg 1x,
+                                    ./images/seafood-mob-x2-min.jpg 2x" media="(max-width: 767px)">
+                                <source srcset="
+                                    ./images/seafood-tab-min.jpg 1x,
+                                    ./images/seafood-tab-x2-min.jpg 2x" media="(max-width: 1199px)">
+                                <source srcset="
+                                    ./images/seafood.jpg 1x,
+                                    ./images/seafood-x2-min.jpg 2x" media="(min-width: 1200px)">
+                                    <img src="./images/seafood.jpg" alt="Ресторан Seafood">
+                            </picture>
+
                             <p class="project__text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur vitae, voluptas unde corporis minus?
                             </p>
@@ -149,7 +187,19 @@
                 <li class="grid__item">
                     <a href="" class="project link">
                         <div class="project__thumb">
-                            <img src="./images/prime.jpg" alt="Проект Prime" >
+                            <picture>
+                                <source srcset="
+                                                                ./images/prime-mob-min.jpg 1x,
+                                                                ./images/prime-mob-x2-min.jpg 2x" media="(max-width: 767px)">
+                                <source srcset="
+                                                                ./images/prime-tab-min.jpg 1x,
+                                                                ./images/prime-tab-x2-min.jpg 2x" media="(max-width: 1199px)">
+                                <source srcset="
+                                                                ./images/prime.jpg 1x,
+                                                                ./images/prime-x2-min.jpg 2x" media="(min-width: 1200px)">
+                            <img src="./images/prime.jpg" alt="Проект Prime">
+                            </picture>
+
                             <p class="project__text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur vitae, voluptas unde corporis minus?
                             </p>
@@ -166,7 +216,22 @@
                 <li class="grid__item">
                     <a href="" class="project link">
                         <div class="project__thumb">
-                            <img src="./images/boxes.jpg" alt="Проект Boxes" >
+                            <picture>
+                                <source srcset="
+                                    ./images/boxes-mob-min.jpg 1x,
+                                    ./images/boxes-mob-x2-min.jpg 2x"
+                                    media="(max-width: 767px)">
+                                <source srcset="
+                                    ./images/boxes-tab-min.jpg 1x,
+                                    ./images/boxes-tab-x2-min.jpg 2x"
+                                    media="(max-width: 1199px)">
+                                <source srcset="
+                                    ./images/boxes.jpg 1x,
+                                    ./images/boxes-x2-min.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <img src="./images/boxes.jpg" alt="Проект Boxes">
+                            </picture>
+
                             <p class="project__text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur vitae, voluptas unde corporis minus?
                             </p>
@@ -183,7 +248,19 @@
                 <li class="grid__item">
                     <a href="" class="project link">
                         <div class="project__thumb">
-                            <img src="./images/inspiration.jpg" alt="Веб-сайт Inspiration has no Borders" >
+                            <picture>
+                                <source srcset="
+                                    ./images/inspiration-mob-min.jpg 1x,
+                                    ./images/inspiration-mob-x2-min.jpg 2x" media="(max-width: 767px)">
+                                <source srcset="
+                                    ./images/inspiration-tab-min.jpg 1x,
+                                    ./images/inspiration-tab-x2-min.jpg 2x" media="(max-width: 1199px)">
+                                <source srcset="
+                                    ./images/inspiration.jpg 1x,
+                                    ./images/inspiration-x2-min.jpg 2x" media="(min-width: 1200px)">
+                                <img src="./images/inspiration.jpg" alt="Веб-сайт Inspiration has no Borders">
+                            </picture>
+                            
                             <p class="project__text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur vitae, voluptas unde corporis minus?
                             </p>
@@ -200,7 +277,19 @@
                 <li class="grid__item">
                     <a href="" class="project link">
                         <div class="project__thumb">
-                            <img src="./images/publish.jpg" alt="Издание Limited Edition" >
+                            <picture>
+                                <source srcset="
+                                    ./images/publish-mob-min.jpg 1x,
+                                    ./images/publish-mob-x2-min.jpg 2x" media="(max-width: 767px)">
+                                <source srcset="
+                                    ./images/publish-tab-min.jpg 1x,
+                                    ./images/publish-tab-x2-min.jpg 2x" media="(max-width: 1199px)">
+                                <source srcset="
+                                    ./images/publish.jpg 1x,
+                                    ./images/publish-x2-min.jpg 2x" media="(min-width: 1200px)">
+                                <img src="./images/publish.jpg" alt="Издание Limited Edition">
+                            </picture>
+
                             <p class="project__text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur vitae, voluptas unde corporis minus?
                             </p>
@@ -217,7 +306,19 @@
                 <li class="grid__item">
                     <a href="" class="project link link">
                         <div class="project__thumb">
-                            <img src="./images/lab.jpg" alt="Проект LAB" >
+                            <picture>
+                                <source srcset="
+                                                                ./images/lab-mob-min.jpg 1x,
+                                                                ./images/lab-mob-x2-min.jpg 2x" media="(max-width: 767px)">
+                                <source srcset="
+                                                                ./images/lab-tab-min.jpg 1x,
+                                                                ./images/lab-tab-x2-min.jpg 2x" media="(max-width: 1199px)">
+                                <source srcset="
+                                                                ./images/lab.jpg 1x,
+                                                                ./images/lab-x2-min.jpg 2x" media="(min-width: 1200px)">
+                                                            <img src="./images/lab.jpg" alt="Проект LAB">
+                            </picture>
+
                             <p class="project__text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur vitae, voluptas unde corporis minus?
                             </p>
@@ -234,7 +335,22 @@
                 <li class="grid__item">
                     <a href="" class="project link link">
                         <div class="project__thumb">
-                            <img src="./images/business.jpg" alt="Приложение Growing Business" >
+                            <picture>
+                                <source srcset="
+                                    ./images/business-mob-min.jpg 1x,
+                                    ./images/business-mob-x2-min.jpg 2x"
+                                    media="(max-width: 767px)">
+                                <source srcset="
+                                    ./images/business-tab-min.jpg 1x,
+                                    ./images/business-tab-x2-min.jpg 2x"
+                                    media="(max-width: 1199px)">
+                                <source srcset="
+                                    ./images/business.jpg 1x,
+                                    ./images/business-x2-min.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <img src="./images/business.jpg" alt="Приложение Growing Business">
+                            </picture>
+                            
                             <p class="project__text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur vitae, voluptas unde corporis minus?
                             </p>

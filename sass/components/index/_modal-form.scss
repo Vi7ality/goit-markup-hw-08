@@ -127,7 +127,7 @@
 .modal-form__checkbox-label {
     font-size: 12px;
     line-height: 1.16;
-
+    white-space: nowrap;
 
     @include desktop {
         font-size: 14px;

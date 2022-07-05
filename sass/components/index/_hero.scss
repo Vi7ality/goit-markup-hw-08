@@ -7,17 +7,51 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/hero-bg.jpg);
+        url(../images/hero-bg-mob-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     // min-width: 420px;
     max-width: 1600px;
     height: auto;
 
+
+    @include pxratio-2 {
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero-bg-mob-x2-min.jpg);
+    }
+
+    @include tablet {
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero-bg-tab-min.jpg);
+
+        @include pxratio-2 {
+            background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/hero-bg-tab-x2.jpg);
+        }
+    }
+
     @include desktop {
         padding-top: 200px;
         padding-bottom: 200px;
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero-bg.jpg);
+
+        @include pxratio-2 {
+            background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/hero-bg-x2-min.jpg);
+        }
     }
+
 
 
 }
