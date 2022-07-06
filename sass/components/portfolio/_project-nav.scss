@@ -6,6 +6,11 @@
     justify-content: start;
     margin-bottom: 40px;
 
+    @media screen and (max-width: 767px) {
+        margin-bottom: -15px;
+    }
+
+
     @include tablet {
         margin-bottom: 30px;
         justify-content: center;
@@ -17,12 +22,16 @@
     }
 }
 
-.project-nav__item--margin {
-    margin-right: 8px;
-}
 
 .project-nav__item {
-    margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+            margin-bottom: 15px;
+        }
+
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
 }
 
 

@@ -41,13 +41,19 @@
 
 }
 
+.footer__start {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+    }
+}
+
 .address {
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
 
     margin-top: 20px;
-    margin-bottom: 60px;
+
 
 }
 
@@ -87,8 +93,10 @@
 // ========footer-center============ //
 
 .footer__center {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
 
-    margin-bottom: 60px;
 
      @include tablet {
         margin-left: 165px;

@@ -16,30 +16,30 @@
 
 <body>
     <header class="header">
-    
         <div class="container header__container">
-            <a href="./index.html" class="logo">
-                <span class="logo-part">Web</span>Studio
-            </a>
-            <div class="menu-container">
+            <a href="./index.html" class="logo"> <span class="logo-part">Web</span>Studio </a>
+
+            <div class="menu-container" id="menu-container" data-menu>
                 <nav class="header__nav">
                     <ul class="nav list">
-                        <li class="nav__item "> <a href="./index.html" class="nav__link link">Студия</a> </li>
                         <li class="nav__item nav__item--current">
-                            <a href="./portfolio.html" class="nav__link nav__link--current link">Портфолио</a>
+                            <a href="./index.html" class="nav__link nav__link--current link">Студия</a>
                         </li>
-                        <li class="nav__item"> <a href="" class="nav__link link">Контакты</a></li>
+                        <li class="nav__item">
+                            <a href="./portfolio.html" class="nav__link link">Портфолио</a>
+                        </li>
+                        <li class="nav__item"><a href="" class="nav__link link">Контакты</a></li>
                     </ul>
                 </nav>
                 <ul class="contacts list">
-                    <li class="contacts__item">
+                    <li class="contacts__item contacts__imail">
                         <a href="mailto:info@devstudio.com" class="contacts__link contacts__email link">
                             <svg class="contacts__icon" width="16" height="12">
                                 <use href="./images/symbol-defs.svg#icon-mail"></use>
                             </svg>
                             info@devstudio.com</a>
                     </li>
-                    <li class="contacts__item contacts__item--margin">
+                    <li class="contacts__item contacts__itel contacts__item--margin">
                         <a href="tel:+380961111111" class="contacts__link contacts__tel link">
                             <svg class="contacts__icon" width="10" height="16">
                                 <use href="./images/symbol-defs.svg#icon-tel"></use>
@@ -63,14 +63,16 @@
                     </li>
                 </ul>
             </div>
+
             <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
                 <svg class="mob-menu__icon" width="40" height="40">
-                    <use class="icon-menu" aria-label="Переключатель мобильного меню" href="./images/icons.svg#icon-menu_mob"></use>
+                    <use class="icon-menu" aria-label="Переключатель мобильного меню"
+                        href="./images/icons.svg#icon-menu_mob">
+                    </use>
                     <use class="icon-close" href="./images/icons.svg#icon-close_mob"></use>
                 </svg>
             </button>
         </div>
-    
     </header>
 
     <main>
@@ -80,13 +82,13 @@
 
             <h1 class="visually-hidden">Наши проекты</h1>
             <ul class="project-nav list">
-                <li class="project-nav__item project-nav__item--margin">
+                <li class="project-nav__item">
                     <button type="button" class="project-nav__filter">Все</button></li>
-                <li class="project-nav__item project-nav__item--margin">
+                <li class="project-nav__item">
                     <button type="button" class="project-nav__filter">Веб-сайты</button></li>
-                <li class="project-nav__item project-nav__item--margin">
+                <li class="project-nav__item">
                     <button type="button" class="project-nav__filter">Приложения</button></li>
-                <li class="project-nav__item project-nav__item--margin">
+                <li class="project-nav__item">
                     <button type="button" class="project-nav__filter">Дизайн</button></li>
                 <li class="project-nav__item">
                     <button type="button" class="project-nav__filter">Маркетинг</button></li>    
