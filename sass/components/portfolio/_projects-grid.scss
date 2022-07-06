@@ -66,7 +66,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    overflow-y: scroll;
+
 
     color: $primary-white-color;
     background-color: rgba(33, 150, 243, 0.9);
@@ -85,6 +85,7 @@
     }
 
     @media screen and (max-width: 767px) {
+        overflow-y: scroll;
         padding: 77px 24px;
     }
 }

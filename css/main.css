@@ -335,6 +335,7 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     position: fixed;
+    overflow: hidden;
     top: 0;
     left: 0;
     z-index: 1;
@@ -1458,7 +1459,6 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  overflow-y: scroll;
   color: #FFFFFF;
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
@@ -1479,6 +1479,7 @@ p {
 }
 @media screen and (max-width: 767px) {
   .project__text {
+    overflow-y: scroll;
     padding: 77px 24px;
   }
 }
