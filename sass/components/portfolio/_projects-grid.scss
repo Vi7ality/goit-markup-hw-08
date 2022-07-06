@@ -1,18 +1,26 @@
 .grid {
 
     // gap: 30px;
-    margin: -15px;
+    margin-top: 30px;
+    margin-bottom: -15px;
+    margin-left: -15px;
 
     @include tablet {
+        margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    @include desktop {
+        margin-top: 30px;
     }
 
 }
 
 .grid__item {
 
-    margin: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
 
     z-index: 9;
     border: 4px;
