@@ -3,10 +3,11 @@
     // gap: 30px;
     margin-top: 30px;
     margin-bottom: -15px;
-    margin-left: -15px;
+
 
     @include tablet {
         margin-top: 40px;
+        margin-left: -15px;
         display: flex;
         flex-wrap: wrap;
     }
@@ -20,7 +21,7 @@
 .grid__item {
 
     margin-bottom: 15px;
-    margin-left: 15px;
+
 
     z-index: 9;
     border: 4px;
@@ -28,6 +29,7 @@
     height: auto;
 
     @include tablet {
+        margin-left: 15px;
         flex-basis: calc((100% - 60px) / 2);
     }
     

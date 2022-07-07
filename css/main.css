@@ -1393,11 +1393,11 @@ p {
 .grid {
   margin-top: 30px;
   margin-bottom: -15px;
-  margin-left: -15px;
 }
 @media screen and (min-width: 768px) {
   .grid {
     margin-top: 40px;
+    margin-left: -15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1413,7 +1413,6 @@ p {
 
 .grid__item {
   margin-bottom: 15px;
-  margin-left: 15px;
   z-index: 9;
   border: 4px;
   width: 100%;
@@ -1421,6 +1420,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .grid__item {
+    margin-left: 15px;
     -ms-flex-preferred-size: calc((100% - 60px) / 2);
         flex-basis: calc((100% - 60px) / 2);
   }
