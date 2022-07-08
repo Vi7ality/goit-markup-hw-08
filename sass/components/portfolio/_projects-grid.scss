@@ -40,6 +40,9 @@
 
 .project {
   display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms timing-function;
 
   &:hover,
@@ -59,11 +62,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-}
-
-.project_thumb img {
-  width: 450px;
-  height: auto;
 }
 
 .project__text {
@@ -99,6 +97,7 @@
 
   border: 1px solid #eeeeee;
   border-top: none;
+  flex-grow: 1;
 }
 
 .project__name {
@@ -106,6 +105,7 @@
 
   font-size: 18px;
   line-height: 2;
+  letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
 
